@@ -1,0 +1,47 @@
+<section class="registration">
+  <div class="registration-container">
+    <h2>Cadastro</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input 
+          type="text" 
+          formControlName="name" 
+          placeholder="Nome"
+          [class.error]="registrationForm.get('name')?.errors && 
+                        (registrationForm.get('name')?.touched || submitted)" 
+        />
+        <span class="error-message" *ngIf="getErrorMessage('name')">
+          {{ getErrorMessage('name') }}
+        </span>
+      </div>
+      <div class="form-group">
+        <input 
+          type="email" 
+          formControlName="email" 
+          placeholder="Email"
+          [class.error]="registrationForm.get('email')?.errors && 
+                        (registrationForm.get('email')?.touched || submitted)" 
+        />
+        <span class="error-message" *ngIf="getErrorMessage('email')">
+          {{ getErrorMessage('email') }}
+        </span>
+      </div>
+      <div class="form-group">
+        <input 
+          type="tel" 
+          formControlName="phone" 
+          placeholder="Telefone"
+          [class.error]="registrationForm.get('phone')?.errors && 
+                        (registrationForm.get('phone')?.touched || submitted)" 
+        />
+        <span class="error-message" *ngIf="getErrorMessage('phone')">
+          {{ getErrorMessage('phone') }}
+        </span>
+      </div>
+      <p class="form-hint">Já tem uma conta?</p>
+      <button type="submit" [disabled]="registrationForm.invalid && submitted">
+        Cadastrar
+      </button>
+    </form>
+  </div>
+</section>

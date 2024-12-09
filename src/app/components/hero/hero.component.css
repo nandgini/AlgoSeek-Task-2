@@ -1,0 +1,96 @@
+.hero {
+  /* background: rgb(108,92,231); */
+/* background: linear-gradient(90deg, rgba(108,92,231,1) 100%, rgba(162,155,254,1) 82%); */
+  margin-top: 5rem;
+  padding: 80px 20px;
+  background-image: url('/assets/fundo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:bottom ;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.description h2, .description p{
+  color: #6C5CE7;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.description{
+  width: 65%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.illustration {
+  max-width: 400px;
+}
+
+.mt-40{
+  margin-top: 40px;
+}
+
+.illustration img {
+  width: 100%;
+  height: auto;
+}
+
+.cta-button {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+.description {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+
+@media (max-width:676px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .illustration {
+    max-width: 300px;
+  }
+  
+  .description {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  .hero-content {
+    display: block;
+  }
+}
